@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nwnu.dao.StudentDao">
+	<sql id="selectStudentWhere">
+		<where>
+			<if test="id!=null and id!=''">
+				and id=#{id}
+			</if>
+			<if test="college!=null and college!=''">
+				and a.college like #{college}"%"
+			</if>
+			<if test="class_name!=null and class_name!=''">
+				and a.class_name like "%"#{class_name}"%"
+			</if>
+			<if test="name!=null and name!=''">
+				and a.name like "%"#{name}"%"
+			</if>
+			<if test="code!=null and code!=''">
+				and a.code like #{code}"%"
+			</if>
+			<if test="number!=null and number!=''">
+				and a.number like #{number}"%"
+			</if>
+			<if test="province!=null and province!=''">
+				and a.province like #{province}"%"
+			</if>
+			<if test="city!=null and city!=''">
+				and a.city like #{city}"%"
+			</if>
+			<if test="area!=null and area!=''">
+				and a.area like #{area}"%"
+			</if>
+			<if test="an!=null and an!='' ">
+				and an=#{an}
+			</if>
+			<if test="bn!=null and bn!=''">
+				and bn=#{bn}
+			</if>
+			<if test="cn!=null and cn!=''">
+				and cn=#{cn}
+			</if>
+			<if test="dn!=null and dn!=''">
+				and dn=#{dn}
+			</if>
+			<if test="en!=null and en!=''">
+				and en=#{en}
+			</if>
+			<if test="fn!=null and fn!=''">
+				and fn=#{fn}
+			</if>
+			<if test="gn!=null and gn!=''">
+				and gn=#{gn}
+			</if>
+			<if test="hn!=null and hn!=''">
+				and hn=#{hn}
+			</if>
+			<if test="in!=null and in!=''">
+				and in=#{in}
+			</if>
+			<if test="jn!=null and jn!=''">
+				and jn=#{jn}
+			</if>
+		</where>
+	</sql>
+	<insert id="insertStudent" parameterType="Student">
+		insert into student-infor(
+			id,
+			college,
+			class_name,
+			time,
+			name,
+			code,
+			number,
+			province,
+			city,
+			area,
+			an,
+			bn,
+			cn,
+			dn,
+			en,
+			fn,
+			gn,
+			hn,
+			in,
+			jn		
+		)value(
+			#{id},
+			#{college},
+			#{class_name},
+			#{time},
+			#{name},
+			#{code},
+			#{number},
+			#{province},
+			#{city},
+			#{area},
+			#{an},
+			#{bn},
+			#{cn},
+			#{dn},
+			#{en},
+			#{fn},
+			#{gn},
+			#{hn},
+			#{in},
+			#{jn},
+			
+		)		
+	</insert>
+</mapper>
