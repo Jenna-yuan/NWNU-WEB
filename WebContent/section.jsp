@@ -236,99 +236,30 @@ body{
 				</tr>
 			</thead>
 			<tbody>
+				<c:forEach var="item" items="${page.rows}">
 					<tr>
-						<td>1</td>
-						<td>计算机科学与工程学院</td>
-						<td>2020-3-24 08:10:03</td>
-						<td>王嫄</td>
-						<td>201771030120</td>
-						<td>17393165057</td>
-						<td>甘肃省</td>
-						<td>兰州市</td>
-						<td>兰州新区</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>1</td>
-						<td>0</td>
-						<td>无</td>
+						<td>${item.id}</td>
+						<td>${item.college}</td>
+						<td>${item.class_name}</td>
+						<td>${item.time}</td>
+						<td>${item.name}</td>
+						<td>${item.code}</td>
+						<td>${item.number}</td>
+						<td>${item.province}</td>
+						<td>${item.city}</td>
+						<td>${item.area}</td>
+						<td>${item.an}</td>
+						<td>${item.bn}</td>
+						<td>${item.cn}</td>
+						<td>${item.dn}</td>
+						<td>${item.en}</td>
+						<td>${item.fn}</td>
+						<td>${item.gn}</td>
+						<td>${item.hn}</td>
+						<td>${item.in}</td>
+						<td>${item.jn}</td>
 					</tr>
-					<tr>
-						<td>2</td>
-						<td>计算机科学与工程学院</td>
-						<td>2020-3-24 08:10:04</td>
-						<td>牛莉梅</td>
-						<td>201771030115</td>
-						<td>17393165021</td>
-						<td>甘肃省</td>
-						<td>天水市</td>
-						<td>甘谷县</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>无</td>
-					</tr>
-					
-					<tr>
-						<td>3</td>
-						<td>计算机科学与工程学院</td>
-						<td>2020-3-24 08:10:07</td>
-						<td>刘颜星</td>
-						<td>16710301</td>
-						<td>17393165023</td>
-						<td>甘肃省</td>
-						<td>兰州市</td>
-						<td>安宁区</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>无</td>
-					</tr>
-					
-					<tr>
-						<td>4</td>
-						<td>计算机科学与工程学院</td>
-						<td>2020-3-24 08:10:10</td>
-						<td>李芬芳</td>
-						<td>16710304</td>
-						<td>17393165026</td>
-						<td>甘肃省</td>
-						<td>兰州市</td>
-						<td>安宁区</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>无</td>
-					</tr>
-					
-					<tr>
-						<td>5</td>
-						<td>计算机科学与工程学院</td>
-						<td>2020-3-24 08:10:17</td>
-						<td>郝占军</td>
-						<td>13710304</td>
-						<td>17393165034</td>
-						<td>甘肃省</td>
-						<td>兰州市</td>
-						<td>安宁区</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>有家人在国外</td>
-					</tr>
+				</c:forEach>
 			</tbody>
 		</table>
 </div>
