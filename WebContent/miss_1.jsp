@@ -249,24 +249,27 @@ body{
 				</tr>
 			</thead>
 			<tbody>
+				<c:forEach var="item" items="${page.rows}">
 					<tr>
-						<td>1</td>
-						<td>体育学院</td>
-						<td>2020-3-24 08:10:06</td>
-						<td>祁甜</td>
-						<td>201771030117</td>
-						<td>17393165022</td>
-						<td>甘肃省</td>
-						<td>酒泉市</td>
-						<td>敦煌市</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>1</td>
-						<td>0</td>
-						<td>无</td>
+						<td>${item.id}</td>
+						<td>${item.college}</td>
+						<td>${item.class_name}</td>
+						<td>${item.time}</td>
+						<td>${item.name}</td>
+						<td>${item.code}</td>
+						<td>${item.number}</td>
+						<td>${item.province}</td>
+						<td>${item.city}</td>
+						<td>${item.area}</td>
+						<td>${item.an}</td>
+						<td>${item.bn}</td>
+						<td>${item.cn}</td>
+						<td>${item.dn}</td>
+						<td>${item.en}</td>
+						<td>${item.fn}</td>
+						<td>${item.gn}</td>
 					</tr>
+				</c:forEach>
 			</tbody>
 		</table>
 </div>
