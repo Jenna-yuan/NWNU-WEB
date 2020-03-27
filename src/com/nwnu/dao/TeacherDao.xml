@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nwnu.dao.TeacherDao">
+	<sql id="selectTeacherWhere">
+		<where>
+			<if test="t_id!=null and t_id!=''">
+				and t_id=#{t_id}
+			</if>
+			<if test="t_work_place!=null and t_work_place!=''">
+				and a.t_work_place like #{t_work_place}"%"
+			</if>
+			<if test="t_name!=null and t_name!=''">
+				and a.t_name like "%"#{t_name}"%"
+			</if>
+			<if test="t_code!=null and t_code!=''">
+				and a.t_code like #{t_code}"%"
+			</if>
+			<if test="t_number!=null and t_number!=''">
+				and a.t_number like #{t_number}"%"
+			</if>
+			<if test="t_province!=null and t_province!=''">
+				and a.t_province like #{t_province}"%"
+			</if>
+			<if test="t_city!=null and t_city!=''">
+				and a.t_city like #{t_city}"%"
+			</if>
+			<if test="t_area!=null and t_area!=''">
+				and a.t_area like #{t_area}"%"
+			</if>
+			<if test="am!=null and am!='' ">
+				and am=#{am}
+			</if>
+			<if test="bm!=null and bm!=''">
+				and bm=#{bm}
+			</if>
+			<if test="cm!=null and cm!=''">
+				and cm=#{cm}
+			</if>
+			<if test="dm!=null and dm!=''">
+				and dm=#{dm}
+			</if>
+			<if test="en!=null and en!=''">
+				and em=#{em}
+			</if>
+			<if test="fn!=null and fn!=''">
+				and fm=#{fm}
+			</if>
+			<if test="gn!=null and gn!=''">
+				and gm=#{gm}
+			</if>
+		</where>
+	</sql>
+	<insert id="insertTeacher" parameterType="Teacher">
+		insert into teacher-infor(
+			t_id,
+			t_work_place,
+			t_time,
+			t_name,
+			t_code,
+			t_number,
+			t_province,
+			t_city,
+			t_area,
+			am,
+			bm,
+			cm,
+			dm,
+			em,
+			fm,
+			gm,		
+		)value(
+			#{t_id},
+			#{t_work_place},
+			#{t_time},
+			#{t_name},
+			#{t_code},
+			#{t_number},
+			#{t_province},
+			#{t_city},
+			#{t_area},
+			#{am},
+			#{bm},
+			#{cm},
+			#{dm},
+			#{em},
+			#{fm},
+			#{gm},
+		)		
+	</insert>
+</mapper>
